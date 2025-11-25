@@ -9,11 +9,10 @@ import {
   ModalService
 } from '@c8y/ngx-components';
 import { ApplicationTableDatasourceService } from './application-table-datasource.service';
-import { IApplication, ITenant } from '@c8y/client';
+import { IApplication, ITenant, ApplicationService } from '@c8y/client';
 import { ApplicationSubscriptionService } from '@services/application-subscription.service';
 import { SubtenantDetailsService } from '@services/subtenant-details.service';
 import { cloneDeep, flatMap } from 'lodash-es';
-import { ApplicationService } from '@c8y/ngx-components/api';
 import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-selection.service';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { TenantsHavingAppModalComponent } from './tenants-having-app-modal/tenants-having-app-modal.component';
@@ -23,7 +22,8 @@ import { take } from 'rxjs/operators';
 @Component({
   providers: [ApplicationTableDatasourceService],
   selector: 'ps-application-provisioning',
-  templateUrl: './application-provisioning.component.html'
+  templateUrl: './application-provisioning.component.html',
+  standalone: false
 })
 export class ApplicationProvisioningComponent {
   @ViewChild(DataGridComponent, { static: true }) dataGrid: DataGridComponent;

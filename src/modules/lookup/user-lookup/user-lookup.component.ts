@@ -14,7 +14,8 @@ import { SubtenantDetailsService } from '@services/subtenant-details.service';
 @Component({
   providers: [UserTableDatasourceService],
   selector: 'ps-user-lookup',
-  templateUrl: './user-lookup.component.html'
+  templateUrl: './user-lookup.component.html',
+  standalone: false
 })
 export class UserLookupComponent {
   columns: Column[];
@@ -188,6 +189,7 @@ export class UserLookupComponent {
         async () => {
           // modal confirmed
           const client = new Client(new BasicAuth());
+          client.core.defaultFetchOptions.credentials = 'omit';
           client.core
             .fetch(`/user/passwordReset?tenantId=${user.tenantId}`, {
               method: 'POST',

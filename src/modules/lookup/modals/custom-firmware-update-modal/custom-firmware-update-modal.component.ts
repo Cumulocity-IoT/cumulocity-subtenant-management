@@ -4,7 +4,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'ps-custom-firmware-update-modal',
-  templateUrl: './custom-firmware-update-modal.component.html'
+  templateUrl: './custom-firmware-update-modal.component.html',
+  standalone: false
 })
 export class CustomFirmwareUpdateModalComponent {
   @Input() response: Subject<{ name: string; version: string; url: string }>;

@@ -7,7 +7,8 @@ import { StorageStatisticsTableDatasourceService } from './storage-statistics-ta
 @Component({
   providers: [StorageStatisticsTableDatasourceService],
   selector: 'ps-storage-statistics',
-  templateUrl: './storage-statistics.component.html'
+  templateUrl: './storage-statistics.component.html',
+  standalone: false
 })
 export class StorageStatisticsComponent {
   columns: Column[];

@@ -7,7 +7,8 @@ import { flatten } from 'lodash-es';
 
 @Component({
   selector: 'ps-firmware-statistics',
-  templateUrl: './firmware-statistics.component.html'
+  templateUrl: './firmware-statistics.component.html',
+  standalone: false
 })
 export class FirmwareStatisticsComponent {
   isLoading = true;

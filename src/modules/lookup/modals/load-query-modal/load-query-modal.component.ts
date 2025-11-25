@@ -9,7 +9,8 @@ import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ps-load-query-modal',
-  templateUrl: './load-query-modal.component.html'
+  templateUrl: './load-query-modal.component.html',
+  standalone: false
 })
 export class LoadQueryModalComponent implements OnInit {
   response: Subject<string>;

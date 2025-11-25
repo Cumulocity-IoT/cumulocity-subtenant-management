@@ -4,7 +4,8 @@ import { SubtenantDetailsService } from '@services/subtenant-details.service';
 
 @Component({
   selector: 'ps-tenant-details',
-  templateUrl: './tenant-details.component.html'
+  templateUrl: './tenant-details.component.html',
+  standalone: false
 })
 export class TenantDetailsComponent {
   @Input() set tenantId(value: string) {

@@ -7,7 +7,8 @@ import { camelCase } from 'lodash-es';
 
 @Component({
   selector: 'ps-store-query-modal',
-  templateUrl: './store-query-modal.component.html'
+  templateUrl: './store-query-modal.component.html',
+  standalone: false
 })
 export class StoreQueryModalComponent {
   queryType = 'inventory';

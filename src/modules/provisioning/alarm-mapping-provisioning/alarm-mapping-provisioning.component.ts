@@ -9,7 +9,8 @@ import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-
 @Component({
   providers: [AlarmMapperService],
   selector: 'ps-alarm-mapping',
-  templateUrl: './alarm-mapping-provisioning.component.html'
+  templateUrl: './alarm-mapping-provisioning.component.html',
+  standalone: false
 })
 export class AlarmMappingProvisioningComponent implements OnInit {
   clients: Client[] = [];

@@ -5,7 +5,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'ps-create-or-edit-retention-rule-modal',
-  templateUrl: './create-or-edit-retention-rule-modal.component.html'
+  templateUrl: './create-or-edit-retention-rule-modal.component.html',
+  standalone: false
 })
 export class CreateOrEditRetentionRuleModalComponent {
   @Input() rule: IRetention;

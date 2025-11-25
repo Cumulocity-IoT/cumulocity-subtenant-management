@@ -5,7 +5,6 @@ import '@c8y/ng1-modules/core';
 // import '@c8y/ng1-modules/smartRules/cumulocity.json';
 // import '@c8y/ng1-modules/dataPointExplorer/cumulocity.json';
 // import '@c8y/ng1-modules/deviceSelector/cumulocity.json';
-import '@c8y/ng1-modules/tenants/cumulocity.json';
 import '@c8y/ng1-modules/tenantApplications/cumulocity.json';
 // import '@c8y/ng1-modules/tenantStatistics/cumulocity.json';
 // import '@c8y/ng1-modules/roles/cumulocity.json';
@@ -31,3 +30,6 @@ import '@c8y/ng1-modules/tenantApplications/cumulocity.json';
 // import '@c8y/ng1-modules/administration-archivesEditor/cumulocity.json';
 // import '@c8y/ng1-modules/administration-auditLogs/cumulocity.json';
 // import '@c8y/ng1-modules/administration-storageLimitEmail/cumulocity.json';
+
+// custom
+import '@c8y/ng1-modules/tenantPolicies/cumulocity.json';

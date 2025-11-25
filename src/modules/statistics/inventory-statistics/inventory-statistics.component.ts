@@ -4,7 +4,8 @@ import { FakeMicroserviceService } from '@services/fake-microservice.service';
 
 @Component({
   selector: 'ps-inventory-statistics',
-  templateUrl: './inventory-statistics.component.html'
+  templateUrl: './inventory-statistics.component.html',
+  standalone: false
 })
 export class InventoryStatisticsComponent {
   query = 'has(c8y_IsDevice)';

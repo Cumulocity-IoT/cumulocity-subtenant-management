@@ -15,7 +15,8 @@ import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-
 @Component({
   providers: [SmartrestTableDatasourceService],
   selector: 'ps-smartrest-provisioning',
-  templateUrl: './smartrest-provisioning.component.html'
+  templateUrl: './smartrest-provisioning.component.html',
+  standalone: false
 })
 export class SmartrestProvisioningComponent {
   title: string;

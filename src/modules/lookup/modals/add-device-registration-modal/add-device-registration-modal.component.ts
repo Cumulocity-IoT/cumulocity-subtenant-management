@@ -7,7 +7,8 @@ import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ps-add-device-registration-modal',
-  templateUrl: './add-device-registration-modal.component.html'
+  templateUrl: './add-device-registration-modal.component.html',
+  standalone: false
 })
 export class AddDeviceRegistrationModalComponent {
   clients: Client[] = [];

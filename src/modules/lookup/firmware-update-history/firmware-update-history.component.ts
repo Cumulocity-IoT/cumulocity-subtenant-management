@@ -9,7 +9,8 @@ import { FirmwareUpdateHistoryTableDatasourceService } from './firmware-update-h
 @Component({
   providers: [FirmwareUpdateHistoryTableDatasourceService],
   selector: 'ps-firmware-update-history',
-  templateUrl: './firmware-update-history.component.html'
+  templateUrl: './firmware-update-history.component.html',
+  standalone: false
 })
 export class FirmwareUpdateHistoryComponent {
   columns: Column[];

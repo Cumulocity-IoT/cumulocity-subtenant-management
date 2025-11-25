@@ -1,7 +1,7 @@
 import { ModuleWithProviders, NgModule, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlertService, AppStateService, CoreModule } from '@c8y/ngx-components';
-import { UserService, IUser } from '@c8y/client';
+import { UserService, IUser, ICurrentUser } from '@c8y/client';
 import { ApiService } from '@c8y/ngx-components/api';
 import { CustomApiService } from '@services/custom-api.service';
 import { ExtensionsService } from '@services/extensions.service';
@@ -78,7 +78,7 @@ export class SubtenantManagementModule implements OnDestroy {
     }
   }
 
-  hasAllRolesForPropperUsage(user: IUser): boolean {
+  hasAllRolesForPropperUsage(user: IUser | ICurrentUser): boolean {
     return this.userService.hasAllRoles(user, this.roles) && this.userService.hasAnyRole(user, this.rolesTenantUpdate);
   }
 

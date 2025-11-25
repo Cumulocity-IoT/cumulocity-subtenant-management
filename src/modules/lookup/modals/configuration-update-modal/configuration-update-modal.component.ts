@@ -6,7 +6,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'ps-configuration-update-modal',
-  templateUrl: './configuration-update-modal.component.html'
+  templateUrl: './configuration-update-modal.component.html',
+  standalone: false
 })
 export class ConfigurationUpdateModalComponent implements OnInit {
   client: Client | undefined;

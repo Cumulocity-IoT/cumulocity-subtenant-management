@@ -23,7 +23,8 @@ import { DeviceTableDatasourceService } from './device-table-datasource.service'
 @Component({
   providers: [DeviceTableDatasourceService],
   selector: 'ps-device-lookup',
-  templateUrl: './device-lookup.component.html'
+  templateUrl: './device-lookup.component.html',
+  standalone: false
 })
 export class DeviceLookupComponent implements OnDestroy {
   @ViewChild(DataGridComponent, { static: true }) dataGrid: DataGridComponent | undefined;

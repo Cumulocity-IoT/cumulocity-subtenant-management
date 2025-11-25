@@ -12,7 +12,7 @@ import {
   ITenant,
   ITenantLoginOption
 } from '@c8y/client';
-import { AlertService, AppStateService, LoginService, ModalService, OptionsService, Status } from '@c8y/ngx-components';
+import { AlertService, AppStateService, ModalService, OptionsService, Status } from '@c8y/ngx-components';
 import { flatMap, get, omit, uniq } from 'lodash-es';
 import { CustomApiService } from './custom-api.service';
 import { SubtenantDetailsService } from './subtenant-details.service';
@@ -49,8 +49,7 @@ export class FakeMicroserviceService implements OnDestroy {
     private tenantSelectionService: TenantSelectionService,
     private appState: AppStateService,
     private alertService: AlertService,
-    private options: OptionsService,
-    private loginService: LoginService
+    private options: OptionsService
   ) {
     if (factories) {
       const roles = flatMap(factories);
@@ -120,12 +119,12 @@ export class FakeMicroserviceService implements OnDestroy {
     return tenants.filter((tmp) => selectedTenantIds.includes(tmp.id as string));
   }
 
-  public async createClients(credentials: ICredentials[], domain?: string): Promise<Client[]> {
+  public async createClients(credentials: ICredentials[]): Promise<Client[]> {
     return Promise.all(
       credentials.map((cred) => {
         let promise = this.clientsPromiseCache.get(cred.tenant as string);
         if (!promise) {
-          promise = this.createClient(cred, domain);
+          promise = this.createClient(cred);
           this.clientsPromiseCache.set(cred.tenant as string, promise);
         }
         return promise;
@@ -135,6 +134,7 @@ export class FakeMicroserviceService implements OnDestroy {
 
   private async allowsOAuth(credentials: ICredentials): Promise<boolean> {
     const client = new FetchClient(new CustomBasicAuth(credentials));
+    client.defaultFetchOptions.credentials = 'omit';
     // it seems like this endpoint has some pretty strict rate limiting..
     for (let i = 0; i < 10; i++) {
       const response = await client.fetch(`/tenant/loginOptions?tenantId=${credentials.tenant}`, {
@@ -156,20 +156,21 @@ export class FakeMicroserviceService implements OnDestroy {
     throw new Error('Too many retries');
   }
 
-  private async createClient(credentials: ICredentials, domain?: string): Promise<Client> {
+  private async createClient(credentials: ICredentials): Promise<Client> {
     this.clientsCredentialsCache.set(credentials.tenant as string, credentials);
     let auth: BasicAuth | BearerAuth;
     if (await this.allowsOAuth(credentials)) {
-      const accessToken = await this.getAccessToken(credentials, domain);
+      const accessToken = await this.getAccessToken(credentials);
       auth = new BearerAuth({ token: accessToken });
     } else {
       auth = new BasicAuth(credentials);
     }
     this.clientsAuthCache.set(credentials.tenant as string, auth);
-    const client = new Client(auth, domain);
+    const client = new Client(auth);
     client.core.tenant = credentials.tenant as string;
     const header = { 'X-Cumulocity-Application-Key': await this.getMsKey() };
     client.core.defaultHeaders = Object.assign(header, client.core.defaultHeaders);
+    client.core.defaultFetchOptions.credentials = 'omit';
     this.customApiService.hookIntoCustomClientFetch(client);
     return client;
   }
@@ -181,7 +182,8 @@ export class FakeMicroserviceService implements OnDestroy {
       password: credentials.password as string,
       tfa_code: credentials.tfa as string
     });
-    const fetchClient = new FetchClient(new CustomBasicAuth(credentials), domain);
+    const fetchClient = new FetchClient(new CustomBasicAuth(credentials));
+    fetchClient.defaultFetchOptions.credentials = 'omit';
     const fn = () => fetchClient.fetch(`/tenant/oauth/token?tenant_id=${credentials.tenant}`, {
       method: 'POST',
       body: params.toString(),
@@ -295,14 +297,9 @@ export class FakeMicroserviceService implements OnDestroy {
     bootstrapCredentials: ICredentials,
     baseUrl?: string
   ): Promise<ICredentials[]> {
-    const loginMode = get(this.loginService, 'loginMode.type', 'BASIC');
+    // const loginMode = get(this.authService, 'loginMode.type', 'BASIC');
     const client: Client = new Client(new BasicAuth(bootstrapCredentials));
-    if (loginMode !== 'BASIC') {
-      this.alertService.danger(
-        `OAuth on the management/enterprise tenant is currently not supported. Please reconfigure your tenant to use this application.`
-      );
-      throw Error(`OAuth on the management/enterprise tenant is currently not supported.`);
-    }
+    client.core.defaultFetchOptions.credentials = 'omit';
     // unable to set use BearerAuth together with OAuthCookie, as Cookie is always preferred..
     // if (loginMode === 'BASIC') {
     //   client = new Client(new BasicAuth(bootstrapCredentials));
@@ -385,8 +382,7 @@ export class FakeMicroserviceService implements OnDestroy {
     if (!tenantCred) {
       throw Error(`No credentials available for tenant: ${tenantId}`);
     }
-    const tenant = await this.subtenantDetails.getDetailsOfTenant(tenantId);
-    const [client] = await this.createClients([tenantCred], tenant?.domain);
+    const [client] = await this.createClients([tenantCred]);
     if (!client) {
       throw Error(`No Client available for tenant: ${tenantId}`);
     }

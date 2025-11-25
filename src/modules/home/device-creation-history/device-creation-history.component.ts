@@ -7,7 +7,8 @@ import { FakeMicroserviceService } from '@services/fake-microservice.service';
 
 @Component({
   selector: 'ps-device-creation-history',
-  templateUrl: './device-creation-history.component.html'
+  templateUrl: './device-creation-history.component.html',
+  standalone: false
 })
 export class DeviceCreationHistoryComponent implements OnInit {
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective<'line'> | undefined;

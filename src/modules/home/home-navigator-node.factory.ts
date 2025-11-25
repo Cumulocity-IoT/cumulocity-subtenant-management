@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { gettext, NavigatorNode, NavigatorNodeFactory } from '@c8y/ngx-components';
+import { NavigatorNode, NavigatorNodeFactory } from '@c8y/ngx-components';
+import { gettext } from '@c8y/ngx-components/gettext';
 import { SubtenantManagementConfigService } from '@services/subtenant-management-config.service';
 
 @Injectable()
