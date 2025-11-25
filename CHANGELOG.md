@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.0.1...v1.1.0) (2025-11-25)
+
+
+### Features
+
+* upgrade to Web SDK v1023 and add support for OAuth on enterprise/management tenant ([#45](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues/45)) ([1916728](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/19167289b89b911ef28092c2ecdba01d6142e88c))
+
 ## [1.0.1](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.0.0...v1.0.1) (2024-08-21)
 
 
