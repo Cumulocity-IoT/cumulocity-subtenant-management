@@ -9,7 +9,8 @@ import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-
 @Component({
   providers: [GlobalRolesTableDatasourceService],
   selector: 'ps-global-roles-provisioning',
-  templateUrl: './global-roles-provisioning.component.html'
+  templateUrl: './global-roles-provisioning.component.html',
+  standalone: false
 })
 export class GlobalRolesProvisioningComponent {
   columns: Column[];

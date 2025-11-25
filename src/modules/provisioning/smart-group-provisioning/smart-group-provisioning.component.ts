@@ -9,7 +9,8 @@ import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-
 @Component({
   providers: [SmartGroupTableDatasourceService],
   selector: 'ps-smart-group-provisioning',
-  templateUrl: './smart-group-provisioning.component.html'
+  templateUrl: './smart-group-provisioning.component.html',
+  standalone: false
 })
 export class SmartGroupsProvisioningComponent {
   columns: Column[];

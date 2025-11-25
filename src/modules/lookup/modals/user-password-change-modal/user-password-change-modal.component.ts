@@ -5,7 +5,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'ps-user-password-change-modal',
-  templateUrl: './user-password-change-modal.component.html'
+  templateUrl: './user-password-change-modal.component.html',
+  standalone: false
 })
 export class UserPasswordChangeModalComponent {
   client: Client;

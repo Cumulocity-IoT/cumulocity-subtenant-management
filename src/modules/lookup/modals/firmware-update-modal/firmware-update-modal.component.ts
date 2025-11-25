@@ -6,7 +6,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'ps-firmware-update-modal',
-  templateUrl: './firmware-update-modal.component.html'
+  templateUrl: './firmware-update-modal.component.html',
+  standalone: false
 })
 export class FirmwareUpdateModalComponent implements OnInit {
   legacyFirmwareUpdates: (IManagedObject & { name?: string; url?: string; version?: string })[];

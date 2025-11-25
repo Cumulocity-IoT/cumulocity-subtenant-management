@@ -13,7 +13,8 @@ import { AddDeviceRegistrationModalComponent } from '../modals/add-device-regist
 @Component({
   providers: [DeviceRegistrationTableDatasourceService],
   selector: 'ps-device-registration-lookup',
-  templateUrl: './device-registration-lookup.component.html'
+  templateUrl: './device-registration-lookup.component.html',
+  standalone: false
 })
 export class DeviceRegistrationLookupComponent {
   columns: Column[];

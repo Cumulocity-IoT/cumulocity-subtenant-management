@@ -13,7 +13,8 @@ import { TenantOptionsTableDatasourceService } from './tenant-options-table-data
 @Component({
   providers: [TenantOptionsTableDatasourceService],
   selector: 'ps-tenant-options-provisioning',
-  templateUrl: './tenant-options-provisioning.component.html'
+  templateUrl: './tenant-options-provisioning.component.html',
+  standalone: false
 })
 export class TenantOptionsProvisioningComponent {
   columns: Column[];

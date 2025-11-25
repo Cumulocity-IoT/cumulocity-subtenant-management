@@ -5,7 +5,8 @@ import { ProvisioningService } from '@services/provisioning.service';
 
 @Component({
   selector: 'ps-firmware-provisioning',
-  templateUrl: './firmware-provisioning.component.html'
+  templateUrl: './firmware-provisioning.component.html',
+  standalone: false
 })
 export class FirmwareProvisioningComponent {
   firmwares: Promise<IManagedObject[]>;

@@ -7,7 +7,8 @@ import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ps-add-user-modal',
-  templateUrl: './add-user-modal.component.html'
+  templateUrl: './add-user-modal.component.html',
+  standalone: false
 })
 export class AddUserModalComponent {
   clients: Client[];

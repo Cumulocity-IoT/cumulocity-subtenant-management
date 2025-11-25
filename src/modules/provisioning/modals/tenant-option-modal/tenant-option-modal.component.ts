@@ -5,7 +5,8 @@ import { ITenantOption } from '@c8y/client';
 
 @Component({
   selector: 'ps-tenant-option-modal',
-  templateUrl: './tenant-option-modal.component.html'
+  templateUrl: './tenant-option-modal.component.html',
+  standalone: false
 })
 export class TenantOptionModalComponent {
   @Input() response: Subject<ITenantOption>;

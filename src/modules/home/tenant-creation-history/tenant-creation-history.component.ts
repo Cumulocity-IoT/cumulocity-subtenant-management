@@ -7,7 +7,8 @@ import { default as pluginChartZoom } from 'chartjs-plugin-zoom';
 
 @Component({
   selector: 'ps-tenant-creation-history',
-  templateUrl: './tenant-creation-history.component.html'
+  templateUrl: './tenant-creation-history.component.html',
+  standalone: false
 })
 export class TenantCreationHistoryComponent implements OnInit {
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective<'line'> | undefined;

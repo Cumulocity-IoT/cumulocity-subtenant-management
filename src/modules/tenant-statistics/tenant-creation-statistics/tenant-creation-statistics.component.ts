@@ -21,7 +21,8 @@ export interface DateTuple {
 
 @Component({
   selector: 'ps-tenant-creation-statistics',
-  templateUrl: './tenant-creation-statistics.component.html'
+  templateUrl: './tenant-creation-statistics.component.html',
+  standalone: false
 })
 export class TenantCreationStatisticsComponent implements OnInit {
   tenant: ITenant;

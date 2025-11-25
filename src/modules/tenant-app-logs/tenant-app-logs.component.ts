@@ -9,7 +9,8 @@ import { MicroserviceLogsService } from './microservice-logs.service';
 
 @Component({
   selector: 'ps-tenant-app-logs',
-  templateUrl: './tenant-app-logs.component.html'
+  templateUrl: './tenant-app-logs.component.html',
+  standalone: false
 })
 export class TenantAppLogsComponent implements OnDestroy {
   loading = true;

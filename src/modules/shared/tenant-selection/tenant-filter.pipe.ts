@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { ITenant } from '@c8y/client';
 
 @Pipe({
-  name: 'tenantFilter'
+  name: 'tenantFilter',
+  standalone: false
 })
 export class TenantFilterPipe implements PipeTransform {
   transform(tenants: ITenant[], searchString: string): ITenant[] {

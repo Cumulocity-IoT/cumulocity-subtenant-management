@@ -6,7 +6,8 @@ import { Subject } from 'rxjs';
 
 @Component({
   selector: 'ps-tenants-having-app-modal',
-  templateUrl: './tenants-having-app-modal.component.html'
+  templateUrl: './tenants-having-app-modal.component.html',
+  standalone: false
 })
 export class TenantsHavingAppModalComponent {
   @Input() subscribedTenants: ITenant[] = [];

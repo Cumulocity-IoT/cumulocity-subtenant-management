@@ -8,7 +8,8 @@ import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'ps-tenant-selection',
-  templateUrl: './tenant-selection.component.html'
+  templateUrl: './tenant-selection.component.html',
+  standalone: false
 })
 export class TenantSelectionComponent implements OnInit {
   @Input() title = 'Subtenant selection';

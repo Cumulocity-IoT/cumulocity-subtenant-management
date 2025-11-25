@@ -6,7 +6,8 @@ import 'chartjs-plugin-datalabels';
 @Component({
   selector: 'ps-bar-chart',
   templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.less']
+  styleUrls: ['./bar-chart.component.less'],
+  standalone: false
 })
 export class BarChartComponent implements OnChanges {
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective<'bar'> | undefined;

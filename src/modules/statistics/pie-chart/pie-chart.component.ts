@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ChartData, ChartOptions, ChartType, Plugin } from 'chart.js';
-import { ChartEvent } from 'chart.js/dist/core/core.plugins';
+import { ChartEvent } from 'chart.js';
 import 'chartjs-plugin-datalabels';
 
 @Component({
   selector: 'ps-pie-chart',
   templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.less']
+  styleUrls: ['./pie-chart.component.less'],
+  standalone: false
 })
 export class PieChartComponent {
   @Input() pieChartData: ChartData<"pie", number[], any> = {datasets: []};

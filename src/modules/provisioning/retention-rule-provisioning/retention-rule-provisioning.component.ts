@@ -14,7 +14,8 @@ import { TenantSelectionService } from '@modules/shared/tenant-selection/tenant-
 @Component({
   providers: [RetentionRuleTableDatasourceService],
   selector: 'ps-retention-rule-provisioning',
-  templateUrl: './retention-rule-provisioning.component.html'
+  templateUrl: './retention-rule-provisioning.component.html',
+  standalone: false
 })
 export class RetentionRuleProvisioningComponent {
   columns: Column[];
