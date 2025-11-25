@@ -1,39 +1,39 @@
-## [1.0.1](https://github.com/SoftwareAG/cumulocity-subtenant-management/compare/v1.0.0...v1.0.1) (2024-08-21)
+## [1.0.1](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.0.0...v1.0.1) (2024-08-21)
 
 
 ### Bug Fixes
 
-* pie charts in firnware statistics ([1f84244](https://github.com/SoftwareAG/cumulocity-subtenant-management/commit/1f8424455f24f8bdc2394563e771a1df80e30330))
+* pie charts in firnware statistics ([1f84244](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/1f8424455f24f8bdc2394563e771a1df80e30330))
 
-# [1.0.0](https://github.com/SoftwareAG/cumulocity-subtenant-management/compare/v0.7.2...v1.0.0) (2024-08-21)
+# [1.0.0](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v0.7.2...v1.0.0) (2024-08-21)
 
 
 ### Features
 
-* switch to ng cli ([#43](https://github.com/SoftwareAG/cumulocity-subtenant-management/issues/43)) ([e57933c](https://github.com/SoftwareAG/cumulocity-subtenant-management/commit/e57933ce417b35a77643887152b8b6649e5f5380))
+* switch to ng cli ([#43](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues/43)) ([e57933c](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/e57933ce417b35a77643887152b8b6649e5f5380))
 
 
 ### BREAKING CHANGES
 
 * Upgraded to Angular 17, switched to ng cli instead of deprecated c8ycli and upgraded chartjs lib
 
-## [0.7.2](https://github.com/SoftwareAG/cumulocity-subtenant-management/compare/v0.7.1...v0.7.2) (2023-12-18)
+## [0.7.2](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v0.7.1...v0.7.2) (2023-12-18)
 
 
 ### Bug Fixes
 
-* bump c8y Web SDK to 1018.0.191 ([4d2eb84](https://github.com/SoftwareAG/cumulocity-subtenant-management/commit/4d2eb84e40c585bfbaadbd0d0d92ca3849ea87a4))
+* bump c8y Web SDK to 1018.0.191 ([4d2eb84](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/4d2eb84e40c585bfbaadbd0d0d92ca3849ea87a4))
 
-## [0.7.1](https://github.com/SoftwareAG/cumulocity-subtenant-management/compare/v0.7.0...v0.7.1) (2023-10-09)
+## [0.7.1](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v0.7.0...v0.7.1) (2023-10-09)
 
 
 ### Bug Fixes
 
-* add list of capabilities ([#39](https://github.com/SoftwareAG/cumulocity-subtenant-management/issues/39)) ([e174014](https://github.com/SoftwareAG/cumulocity-subtenant-management/commit/e1740149e79b4bcf34a427261427ca28d6324be4))
+* add list of capabilities ([#39](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues/39)) ([e174014](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/e1740149e79b4bcf34a427261427ca28d6324be4))
 
-# [0.7.0](https://github.com/SoftwareAG/cumulocity-subtenant-management/compare/v0.6.0...v0.7.0) (2023-09-15)
+# [0.7.0](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v0.6.0...v0.7.0) (2023-09-15)
 
 
 ### Features
 
-* upgrade to v1018 of Web SDK ([#37](https://github.com/SoftwareAG/cumulocity-subtenant-management/issues/37)) ([c1be07b](https://github.com/SoftwareAG/cumulocity-subtenant-management/commit/c1be07b6682164f4d81609716024dec772993639))
+* upgrade to v1018 of Web SDK ([#37](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues/37)) ([c1be07b](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/c1be07b6682164f4d81609716024dec772993639))

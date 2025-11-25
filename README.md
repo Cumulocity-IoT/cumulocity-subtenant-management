@@ -41,7 +41,7 @@ These capabilities could be in general extended further. For any requirements ra
 
 1. Open the Administration app of your enterprise or management tenant
 2. Navigate to "Ecosystem" -> "Extensions"
-3. Look for the "Subtenant Management" extension. In case it is not available by default, you can download the [latest release of the Subtenant Management App](https://github.com/SoftwareAG/cumulocity-subtenant-management/releases/latest) and install it into your tenant by clicking "Add extension package"
+3. Look for the "Subtenant Management" extension. In case it is not available by default, you can download the [latest release of the Subtenant Management App](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/releases/latest) and install it into your tenant by clicking "Add extension package"
 4. The "Subtenant Management" extension should now be visible within the list. Click on the entry within the list.
 5. Now click the "Deploy application" button to install the blueprint as an application into your tenant.
 6. Follow the instructions in the dialog.

@@ -4,15 +4,15 @@
   "description": "Tool for managing subtenants from a c8y management or enterprise tenant",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SoftwareAG/cumulocity-subtenant-management.git"
+    "url": "git+https://github.com/Cumulocity-IoT/cumulocity-subtenant-management.git"
   },
   "keywords": [],
   "author": "Tristan Bastian",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/SoftwareAG/cumulocity-subtenant-management/issues"
+    "url": "https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues"
   },
-  "homepage": "https://github.com/SoftwareAG/cumulocity-subtenant-management#readme",
+  "homepage": "https://github.com/Cumulocity-IoT/cumulocity-subtenant-management#readme",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
