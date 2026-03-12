@@ -27,7 +27,12 @@ export default {
       class: "c8y-icon-sub-tenants"
     },
     isPackage: true,
-    package: 'blueprint'
+    package: 'blueprint',
+    blueprintDeploymentOptions: {
+      name: 'Subtenant Management',
+      contextPath: 'subtenant-management',
+      key: 'subtenant-management-application-key'
+    }
   },
   buildTime: {
     copy: [
