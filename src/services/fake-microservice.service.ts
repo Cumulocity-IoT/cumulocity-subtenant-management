@@ -298,7 +298,7 @@ export class FakeMicroserviceService implements OnDestroy {
     baseUrl?: string
   ): Promise<ICredentials[]> {
     // const loginMode = get(this.authService, 'loginMode.type', 'BASIC');
-    const client: Client = new Client(new BasicAuth(bootstrapCredentials));
+    const client: Client = await Client.authenticateViaOAuthInternal(bootstrapCredentials);
     client.core.defaultFetchOptions.credentials = 'omit';
     // unable to set use BearerAuth together with OAuthCookie, as Cookie is always preferred..
     // if (loginMode === 'BASIC') {
