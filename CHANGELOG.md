@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.1.1...v1.1.2) (2026-03-12)
+
+
+### Bug Fixes
+
+* suggest different contextPath and name during blueprint deployment ([ff89bcc](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/ff89bccb15547fe2da21245e2ec344a99687db2e))
+
 ## [1.1.1](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.1.0...v1.1.1) (2026-03-12)
 
 
