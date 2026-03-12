@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.1.0...v1.1.1) (2026-03-12)
+
+
+### Bug Fixes
+
+* allow accessing subtenants even if basic auth is forbidden for web browsers ([#47](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/issues/47)) ([2433469](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/commit/243346911d9c7008e32bd2f6396898616caf94ed))
+
 # [1.1.0](https://github.com/Cumulocity-IoT/cumulocity-subtenant-management/compare/v1.0.1...v1.1.0) (2025-11-25)
 
 
